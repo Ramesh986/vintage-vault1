@@ -1,0 +1,108 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f9f4ea;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a2f1b;
+}
+
+.navbar-nav .nav-link {
+  color: #4a2f1b !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6f4e37 !important;
+}
+
+.navbar .form-control {
+  border-radius: 20px;
+}
+
+.btn-outline-success {
+  border-radius: 20px;
+  border-color: #6f4e37;
+  color: #6f4e37;
+}
+
+.btn-outline-success:hover {
+  background-color: #6f4e37;
+  color: white;
+}
+
+
+ .navbar {
+  background-color: #6F3F2F; /* Brown background */
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-brand .brand-text, /* Target the span specifically if needed, though parent 'navbar-brand' should cover it */
+.navbar .nav-link,
+.navbar .nav-item .nav-link, /* More specific for Bootstrap nav-links */
+.navbar .nav-link.active,
+.navbar .dropdown-toggle,
+.navbar .form-inline .form-control::placeholder, /* For placeholder text in search input */
+.navbar .form-inline .btn-outline-success, /* Target the button text */
+.navbar .dropdown-item { /* For items inside the dropdown */
+  color: white !important; /* Use !important to override Bootstrap's specificity */
+}
+
+/* For dropdown items when hovered or focused, to maintain white text */
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  color: white !important; /* Keep text white on hover/focus */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: A slightly lighter background on hover for visibility */
+}
+
+/* To ensure the outline button text is white when hovered/focused */
+.navbar .form-inline .btn-outline-success:hover,
+.navbar .form-inline .btn-outline-success:focus {
+    color: white !important;
+    background-color: #5a3227 !important; /* A slightly darker brown on hover */
+    border-color: white !important;
+}
+
+/* For disabled links, if you want them white but visually distinct */
+.navbar .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.5) !important; /* Lighter white for disabled */
+}
+
+/* For the search input text color when typed */
+.navbar .form-inline .form-control {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.2) !important; /* Slightly transparent white background for input */
+    border-color: white !important; /* White border for input */
+}
+ .carousel-inner img {
+      height: 800px;
+      object-fit: cover;
+}
+
+.text-overlay{
+    font-weight: bolder;
+    font-family: 'Cinzel', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 80px;
+    z-index: 10;
+    text-align: center;
+}
+
+.Products{
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+.h-prod{
+    font-size: 48px;
+}
