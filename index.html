@@ -2,48 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vintage Vault</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css"> <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-
 </head>
 <body>
+
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light px-4 fixed-top ">
+<nav class="navbar navbar-expand-lg navbar-light px-4 fixed-top">
   <a class="navbar-brand d-flex align-items-center" href="#">
     <img src="logo.png" width="40" height="40" class="mr-2" alt="Vintage Vault Logo">
     <span class="brand-text">Vintage Vault</span>
   </a>
 
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="nav-link active" href="#carouselExampleIndicators">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Products</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Categories</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Maharaj's Gold</a>
-        <a class="dropdown-item" href="#">Decor</a>
-        <a class="dropdown-item" href="#">Collectibles</a>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">About Us</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Contact</a>
-    </li>
-  </ul>
+  <!-- Toggler button for mobile -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <form class="form-inline ml-3">
-    <input class="form-control mr-2" type="search" placeholder="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
+  <!-- Navbar content collapses here -->
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="#carouselExampleIndicators">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Orders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Contact</a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0 ml-lg-3">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
 </nav>
+
 <!-- navbar -->
 
 <!-- Carousel -->
@@ -77,64 +83,126 @@
   </a>
 </div>
 <!-- Carousel -->
+
 <br>
 
 <!--Products-->
-<div class="Products">
-  <h1 class="h-prod" style="font-size: 80px;">Products</h1>
-  <hr>
+<div class="Products" id="Products" style="text-align: center;">
+  <h1 class="h-prod" style="font-size: 50px;">Discover Our Collections</h1>
 </div>
+
+<p style="text-align: center; font-size: 30px; color: black; font-family: 'Georgia', serif;">Home-Decor Products</p>
 
 <div class="container mt-5">
   <div class="row">
     <!-- Card 1 -->
-    <div class="col-md-3">
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
       <div class="card">
-        <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+        <img src="Box1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card Title 1</h5>
-          <p class="card-text">Some quick example text.</p>
+          <h5 class="card-title">God Natrajan Statue</h5>
+          <h6><span class="badge" style="font-size: 100%;">₹59,999/-</span></h6>
+          <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
         </div>
       </div>
     </div>
 
     <!-- Card 2 -->
-    <div class="col-md-3">
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
       <div class="card">
-        <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+        <img src="Box2.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card Title 2</h5>
-          <p class="card-text">Some quick example text.</p>
+          <h5 class="card-title">Amphora Vases</h5>
+          <h6><span class="badge" style="font-size: 100%;">₹19,999/-</span></h6>
+          <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
         </div>
       </div>
     </div>
 
     <!-- Card 3 -->
-    <div class="col-md-3">
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
       <div class="card">
-        <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+        <img src="Box5.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card Title 3</h5>
-          <p class="card-text">Some quick example text.</p>
+          <h5 class="card-title">Vintage Telephone</h5>
+          <h6><span class="badge" style="font-size: 100%;">₹39,999/-</span></h6>
+          <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
         </div>
       </div>
     </div>
 
     <!-- Card 4 -->
-    <div class="col-md-3">
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
       <div class="card">
-        <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+        <img src="Box4.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card Title 4</h5>
-          <p class="card-text">Some quick example text.</p>
+          <h5 class="card-title">Peacock Pot Stand</h5>
+          <h6><span class="badge" style="font-size: 100%;">₹99,999/-</span></h6>
+          <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<p style="text-align: center; font-size: 30px; color: black; font-family: 'Georgia', serif;">Beauty Products</p>
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Card 5 -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card">
+        <img src="Box3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Gold Scythian Necklace</h5>
+          <h6><span class="badge" style="font-size: 100%;">1,99,999/-</span></h6>
+          <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
         </div>
       </div>
     </div>
 
+    <!-- Card 6 -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card">
+        <img src="Box6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Garnet-Strap Neclace</h5>
+          <h6><span class="badge" style="font-size: 100%;">₹29,999/-</span></h6>
+          <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card">
+        <img src="Box7.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Royal Antique Bnagles</h5>
+          <h6><span class="badge" style="font-size: 100%;">₹5,999/-</span></h6>
+          <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card">
+        <img src="Box8.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Stone-Studded Bnagles</h5>
+          <h6><span class="badge" style="font-size: 100%;">₹9,999/-</span></h6>
+          <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!--Products-->
+<br><br>
+<p style="text-align: center; font-size: 30px; color: black; font-family: 'Georgia', serif;">Many Mores coming soon............</p>
 
 <!-- Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
