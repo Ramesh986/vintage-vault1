@@ -1,108 +1,185 @@
+/* General */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Georgia', serif;
   background-color: #f9f4ea;
+  padding-top: 70px;
 }
 
+/* Navbar */
 .navbar {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #6F3F2F;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .brand-text {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4a2f1b;
+  color: white !important;
 }
 
-.navbar-nav .nav-link {
-  color: #4a2f1b !important;
-  font-weight: 500;
+.navbar-nav .nav-link,
+.navbar .form-inline .form-control::placeholder,
+.navbar .dropdown-item {
+  color: white !important;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #6f4e37 !important;
-}
-
-.navbar .form-control {
-  border-radius: 20px;
-}
-
-.btn-outline-success {
-  border-radius: 20px;
-  border-color: #6f4e37;
-  color: #6f4e37;
-}
-
-.btn-outline-success:hover {
-  background-color: #6f4e37;
+.navbar .form-inline .btn-outline-success {
+  border-color: white;
   color: white;
 }
 
-
- .navbar {
-  background-color: #6F3F2F; /* Brown background */
+.navbar .form-inline .btn-outline-success:hover {
+  background-color: #5a3227;
+  color: white;
+  border-color: white;
 }
 
-.navbar .navbar-brand,
-.navbar .navbar-brand .brand-text, /* Target the span specifically if needed, though parent 'navbar-brand' should cover it */
-.navbar .nav-link,
-.navbar .nav-item .nav-link, /* More specific for Bootstrap nav-links */
-.navbar .nav-link.active,
-.navbar .dropdown-toggle,
-.navbar .form-inline .form-control::placeholder, /* For placeholder text in search input */
-.navbar .form-inline .btn-outline-success, /* Target the button text */
-.navbar .dropdown-item { /* For items inside the dropdown */
-  color: white !important; /* Use !important to override Bootstrap's specificity */
-}
-
-/* For dropdown items when hovered or focused, to maintain white text */
-.navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus {
-  color: white !important; /* Keep text white on hover/focus */
-  background-color: rgba(255, 255, 255, 0.1); /* Optional: A slightly lighter background on hover for visibility */
-}
-
-/* To ensure the outline button text is white when hovered/focused */
-.navbar .form-inline .btn-outline-success:hover,
-.navbar .form-inline .btn-outline-success:focus {
-    color: white !important;
-    background-color: #5a3227 !important; /* A slightly darker brown on hover */
-    border-color: white !important;
-}
-
-/* For disabled links, if you want them white but visually distinct */
-.navbar .nav-link.disabled {
-    color: rgba(255, 255, 255, 0.5) !important; /* Lighter white for disabled */
-}
-
-/* For the search input text color when typed */
 .navbar .form-inline .form-control {
-    color: white !important;
-    background-color: rgba(255, 255, 255, 0.2) !important; /* Slightly transparent white background for input */
-    border-color: white !important; /* White border for input */
-}
- .carousel-inner img {
-      height: 800px;
-      object-fit: cover;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
 }
 
-.text-overlay{
-    font-weight: bolder;
-    font-family: 'Cinzel', serif;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 80px;
-    z-index: 10;
-    text-align: center;
+.navbar .nav-link.disabled {
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.Products{
-  font-family: 'Georgia', serif;
+/* Carousel */
+.carousel-inner img {
+  height: 80vh;
+  object-fit: cover;
+}
+
+.text-overlay {
+  font-family: 'Cinzel', serif;
+  font-weight: bolder;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5vw;
+  z-index: 10;
   text-align: center;
 }
 
-.h-prod{
-    font-size: 48px;
+/* Product Section */
+.h-prod {
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin: 40px auto;
+  color: #222;
+  text-align: center;
+}
+
+.h-prod::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background-color: #4a2f1b;
+  border-radius: 2px;
+}
+
+.category-title {
+  text-align: center;
+  font-size: 1.75rem;
+  color: black;
+  margin-top: 30px;
+  font-family: 'Georgia', serif;
+}
+
+.card {
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: contain;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 1rem;
+  color: #4a2f1b;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.btn-primary {
+  background-color: #4a2f1b !important;
+  border-color: #4a2f1b !important;
+  color: white !important;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #3b2416 !important;
+  border-color: #3b2416 !important;
+}
+
+.coming-soon {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 40px;
+  color: #333;
+  font-family: 'Georgia', serif;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 992px) {
+  .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-overlay {
+    font-size: 7vw;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .navbar .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navbar .form-inline .form-control {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-overlay {
+    font-size: 9vw;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
 }
