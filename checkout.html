@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#6F3F2F;">
+    <a class="navbar-brand brand-text" href="index.html">Vintage Vault</a>
+  </nav>
+
+  <div class="container mt-5 pt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+        <div class="checkout-wrap">
+          <h2 class="mb-4">Enter Your Details</h2>
+          <form id="checkoutForm" class="checkout-form">
+            <label for="name">Full Name <span style="color:#b3261e">*</span>
+              <input type="text" name="name" id="name" required maxlength="40">
+            </label>
+            <label for="phone">Phone Number <span style="color:#b3261e">*</span>
+              <input type="tel" name="phone" id="phone" required pattern="[0-9]{10}" maxlength="10">
+              <small class="form-text text-muted">Must be 10 digits.</small>
+            </label>
+            <label for="email">Email <span style="color:#b3261e">*</span>
+              <input type="email" name="email" id="email" required maxlength="60">
+            </label>
+            <label for="address">Address <span style="color:#b3261e">*</span>
+              <textarea name="address" id="address" rows="4" required maxlength="160"></textarea>
+            </label>
+            <label for="pincode">Pin Code <span style="color:#b3261e">*</span>
+              <input type="text" name="pincode" id="pincode" required pattern="[0-9]{6}" maxlength="6">
+              <small class="form-text text-muted">6 digit Indian Pin Code.</small>
+            </label>
+            <button type="submit" class="btn-primary-xxl mt-2">Place Order</button>
+          </form>
+          <div id="success" class="success hide">🎉 Order placed successfully! Redirecting...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

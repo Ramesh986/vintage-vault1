@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Orders</title>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#6F3F2F;">
+    <a class="navbar-brand brand-text" href="index.html">Vintage Vault</a>
+  </nav>
+
+  <div class="container mt-5 pt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8">
+        
+        <!-- Heading -->
+        <h2 class="h-prod text-center mb-4">Your Orders</h2>
+        <p id="cart-count-display" class="text-center text-muted mb-4"></p>
+
+        <!-- 🔹 Order List Container (fixed) -->
+        <div id="order-list"></div>
+
+        <!-- Subtotal Section -->
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          <h4>Subtotal:</h4>
+          <h4 id="subtotal">₹0</h4>
+        </div>
+        <p class="text-muted text-right mb-3">Estimated delivery: 5–7 business days</p>
+
+        <!-- Buttons -->
+        <button class="btn btn-danger btn-block mb-2" id="clearCartBtn">Remove All</button>
+        <a href="index.html" class="btn btn-outline-secondary btn-block mb-2">← Continue Shopping</a>
+        <button class="btn btn-primary btn-lg btn-block" id="confirmOrderBtn">Confirm Order</button> <!-- ✅ Only ONE button -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script -->
+  <script src="order.js"></script>
+</body>
+</html>
